@@ -1,0 +1,61 @@
+# Python bytecode
+*.py[cod]
+__pycache__/
+*.so
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Django specific
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.sqlite
+*.env
+
+# Environment variables
+.env
+*.env.*
+
+# Secrets
+settings_local.py
+config.yaml
+
+# Migrations
+*/migrations/*.py
+*/migrations/*.pyc
+!*/migrations/__init__.py
+
+# Static and media files
+/static/
+/media/
+
+# Node modules (if using npm or yarn for frontend assets)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*~
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Build files
+*.egg-info/
+*.egg
+dist/
+build/

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study form</title>
+  <link rel="stylesheet" href="{% static 'show_study.css' %}">
+
+</head>
+<body>
+
+    
+  <nav class="navbar">
+
+    <div class="logo">
+      <a href="/home">Logo</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href={% url 'createstudyformview' %}>Create</a></li>
+    </ul>
+
+  </nav>
+
+  <section>
+    <table>
+      <thead>
+         <tr>
+          <th>ID</th>
+          <th>Study name</th>
+          <th>Study Phase</th>
+          <th>Sponsor Name</th>
+          <th>Study Description</th>
+          <th></th>
+          <th></th>
+          <th></th>
+         </tr>
+      </thead>
+      <tbody>
+          {% for user in users %}
+              <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.Study_name }}</td>
+                <td>{{ user.Study_Phase }}</td>
+                <td>{{ user.Sponsor_Name }}</td>
+                <td>{{ user.Study_Description }}</td>
+                <td><button><a href = "{% url 'listdata' pk=user.pk %}">View</a></button></td>
+                <td><button><a href = "{% url 'editstudyformview' pk=user.pk %}">Edit</a></button/></td>
+                <td> 
+
+                  <form action={% url 'delete' pk=user.id %} method="post">
+                    {% csrf_token %}
+                    <button type="submit" value="delete">delete</button>
+                  </form> 
+
+                </td>
+                 
+                
+              </tr>
+          {% endfor %}
+      </tbody>
+    </table> 
+
+  </section>
+
+  <div class="add_delte_btn_grp">
+    
+    <button><a href="{% url 'createstudyformview' %}">Add</a></button>
+
+    
+    <form action="{% url 'deleteall' %}" method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn delete-btn">Delete</button>
+    </form>
+  </div>
+  
+  
+</body>
+</html>
+
+
+
+

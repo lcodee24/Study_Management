@@ -1,0 +1,173 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: lightblue;
+}
+
+/* /////////////////////////////////////////////////////   */
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4; 
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////   */
+
+.form_grp{
+   width:100vw;
+   height:auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:50px;
+}
+
+form{
+  width:50%;
+  height:70%;
+  padding:20px;
+  border-radius: 15px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 6px 4px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:start;
+}
+
+.form_grp form div{
+  width:100%;
+  height:auto;
+}
+
+
+
+.form_grp form label {
+   color:purple;
+   font-size: 18px;
+   font-weight: bolder;
+}
+
+.form_grp form div input{
+  width:100%;
+  padding:10px 0px;
+  border-radius: 3px;
+  border: 2px solid lightslategray;
+  padding-left: 5px;
+  font-size: 17px;
+}
+
+.form_grp form div textarea{
+  width:100%;
+  padding:10px 0px;
+  border-radius: 3px;
+  border: 2px solid lightslategray;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+.form_grp form div select{
+  width:100%;
+  padding:10px 0px;
+}
+
+.form_grp form div select option {
+  font-size: 16px;
+  padding: 10px;
+}
+
+
+.form_grp .btn-grp{
+  margin-top: 20px;
+}
+
+form .btn-grp{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  align-items: center;
+}
+
+form .btn-grp button{
+   padding:5px 10px;
+   border-radius: 5px;
+   border:2px solid purple;
+   color:green;
+   font-size: 17px;
+}
+form .btn-grp button a{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:1300px){
+   form{
+     width:60%;
+   }
+}
+
+@media screen and (max-width:1100px){
+  form{
+    width:65%;
+  }
+}
+
+@media screen and (max-width:900px){
+  form{
+    width:75%;
+  }
+}
+
+@media screen and (max-width:700px){
+  form{
+    width:85%;
+  }
+}
+
+@media screen and (max-width:500px){
+  form{
+    width:93%;
+  }
+}

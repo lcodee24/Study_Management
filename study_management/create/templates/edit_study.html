@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study form</title>
+  <link rel="stylesheet" href="{% static 'edit_study.css' %}">
+
+</head>
+<body>
+
+    
+  <nav class="navbar">
+
+    <div class="logo">
+      <a href="/home">Logo</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href={% url 'showstudyformview' %}>Home</a></li>
+    </ul>
+
+  </nav>
+
+
+      <section class = 'form_grp' >
+        <form method="post" action={% url 'editstudyformview' pk=study_form.pk %}>
+          {% csrf_token %}
+          {% for field in form %}
+              <label for={{ field.id_for_label }}>{{ field.label }} </label>
+              <div>{{ field }}</div>
+              {% if field.errors %}
+                  <div class='error'>
+                      <ul>
+                         {% for error in field.errors %}
+                             <li>{{ error }}</li>
+                         {% endfor %}
+                      </ul>
+                  </div>
+              {% endif %}
+          {% endfor %}
+          <div class="btn-grp">
+            <button><a href={% url 'showstudyformview' %}>Cancel</a></button>
+            <button type="submit">Edit</button>
+          </div>
+        </form>
+      </section>
+</body>
+</html>
+
+

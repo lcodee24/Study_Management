@@ -1,0 +1,45 @@
+<!-- list_study.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Detail</title>
+  <link rel="stylesheet" href="{% static 'detail_study.css' %}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/home">Logo</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="{% url 'showstudyformview' %}">Home</a></li>
+    </ul>
+  </nav>
+
+  <section class="study-detail">
+    <h1>Study Details</h1>
+    
+    <div class="study-container">
+
+      <div class="study-item">
+
+        <h2>{{ studydata.Study_name }}</h2>
+
+        <div class="study-details">
+          <div><strong>Study ID:</strong> {{ studydata.id }}</div>
+          <div><strong>Study Phase:</strong> {{ studydata.Study_Phase }}</div>
+          <div><strong>Sponsor Name:</strong> {{ studydata.Sponsor_Name }}</div>
+          <div><strong>Study Description:</strong> {{ studydata.Study_Description }}</div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+</html>

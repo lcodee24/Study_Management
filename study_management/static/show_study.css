@@ -1,0 +1,36 @@
+/* Style for the section containing the table */
+section {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow-x: auto;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures no space between table borders */
+  text-align: left;
+  font-family: Arial, sans-serif;
+  border: 2px solid black; /* Black border for the entire table */
+}
+
+/* Table header styles */
+thead th {
+  background-color: #f4f4f4;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid black; /* Black border around header cells */
+}
+
+/* Table body cell styles */
+tbody td {
+  padding: 10px;
+  border: 1px solid black; /* Black border around body cells */
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
